@@ -97,16 +97,13 @@ export function Home() {
         <LoginList
           keyExtractor={(item) => item.id}
           data={searchListData}
-          renderItem={({ item: loginData }) => {
-            console.log(loginData);
-            return (
-              <LoginDataItem
-                service_name={loginData.service_name}
-                email={loginData.email}
-                password={loginData.password}
-              />
-            );
-          }}
+          renderItem={({ item: loginData }) => (
+            <LoginDataItem
+              service_name={loginData.service_name}
+              email={loginData.email}
+              password={loginData.password}
+            />
+          )}
         />
       </Container>
     </>
